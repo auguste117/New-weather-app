@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  background-color: rgb(231, 213, 213);
+  margin: 10px;
+  color: rgb(22, 21, 19);
+  list-style-type: none;
+}
+/*MOILE*/
+
+ul li {
+  padding: 5px;
+  margin: 0 auto;
+}
+.box {
+  cursor: pointer;
+}
+.box :hover {
+  color: white;
+  background-color: #000203;
+}
+.App {
+  width: 100%;
+  background-color: rgba(93, 114, 128, 0.05);
+  padding: 55px 0;
+}
+button,
+input {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(231, 213, 213);
+}
+.container {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  background-color: #21304e;
+  max-width: 600px;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 5px;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3),
+    0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}
+
+.locations {
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.current {
+  color: rgb(22, 21, 19);
+  background-color: rgb(231, 213, 213);
+  padding: 20px;
+  margin: 10px;
+}
+.current div {
+  margin: 10px;
+}
+.forecast {
+  background-color: rgb(231, 213, 213);
+  margin: 10px;
+  color: rgb(22, 21, 19);
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+.forecast div {
+  margin: 10px;
+}
+/*--footer*/
+/*TABLET*/
+
+@media screen and (min-width: 768px) {
+  .locations {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+  .current {
+    justify-content: space-between;
+    display: flex;
+  }
+}
+/*DESKTOP*/
+@media screen and (min-width: 1140px) {
+  /*--header*/
+  /*--main*/
+  .App {
+    font-size: 30px;
+  }
+  .container {
+    max-width: 1140px;
+    font-size: 14px;
+  }
+  .current,
+  .forecast {
+    justify-content: space-around;
+  }
+}
