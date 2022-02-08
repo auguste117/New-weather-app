@@ -6,15 +6,12 @@ function Locations({ location }) {
   const [currentWeather, setCurrentWeather] = useState("");
   const [forecast, setForecast] = useState([]);
   useEffect(() => {
-    console.log({ currentWeather });
-    const user = {
-      name: "as",
-      surname: "mur",
-    };
+ 
+ 
     const options = {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ name: "auguste" }),
+      body: JSON.stringify(currentWeather),
     };
     fetch("http://localhost:8080/weather", options)
       .then((res) => res.json())
