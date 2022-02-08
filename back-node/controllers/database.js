@@ -4,7 +4,6 @@ const weatherDatabase = require("../schemas/currentWeather");
 module.exports = {
   createLocation: async (req, res) => {
     const value = req.params.value;
-    console.log(value);
     const location = new locationDatabase();
     location.value = value;
 
@@ -13,6 +12,10 @@ module.exports = {
     res.send({ message: "location saved" });
   },
   currentWeather: async (req, res) => {
-    res.send({ message: "Registration ok" });
+      const { currentWeather } = req.body;
+        const weather = new weatherDatabase();
+    await weather.save();
+
+    res.send({ message: "weather saved" });
   },
 };
