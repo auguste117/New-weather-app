@@ -5,6 +5,8 @@ app.use(cors());
 const mongoose = require("mongoose");
 const mainRouter = require("./router/rounter");
 app.use(["/"], mainRouter);
+app.use(express.json());
+app.listen(8080);
 
 mongoose
   .connect(
@@ -17,6 +19,4 @@ mongoose
     console.log(e);
   });
 
-const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, console.log(`Server started on port ${PORT}`));
